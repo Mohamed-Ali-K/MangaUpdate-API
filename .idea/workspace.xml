@@ -7,8 +7,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e6f13c6-87cf-47d9-a609-17aab73f56cd" name="Changes" comment="add a Main.kt just for the purpose of testing the Application">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="2e6f13c6-87cf-47d9-a609-17aab73f56cd" name="Changes" comment="modification of README.md">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/kenis/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/kenis/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/kenis/MangaUpDates.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/kenis/MangaUpDates.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +78,7 @@
       <option name="presentableId" value="Default" />
       <updated>1663986338720</updated>
       <workItem from="1663986340552" duration="2601000" />
-      <workItem from="1664017964752" duration="5608000" />
+      <workItem from="1664017964752" duration="10725000" />
     </task>
     <task id="LOCAL-00001" summary="project creation">
       <created>1663986819810</created>
@@ -113,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664023684597</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="modification of README.md">
+      <created>1664024258560</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1664024258560</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,6 +144,7 @@
     <MESSAGE value="add README.md" />
     <MESSAGE value="README.md modification" />
     <MESSAGE value="add a Main.kt just for the purpose of testing the Application" />
-    <option name="LAST_COMMIT_MESSAGE" value="add a Main.kt just for the purpose of testing the Application" />
+    <MESSAGE value="modification of README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="modification of README.md" />
   </component>
 </project>

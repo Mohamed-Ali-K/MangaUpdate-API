@@ -4,6 +4,7 @@ fun main(args: Array<String>) {
 
     val listOfMangaTitle = listOf<String>(
         "Tales of Demons and Gods",
+        "妖神记",
         "Hunter x Hunter",
         "bleach",
         "one piece",

@@ -13,7 +13,7 @@ open class MangaUpDates(mangaName: String) {
     private val client = OkHttpClient()
     private val BASE_URL = "https://api.mangaupdates.com/v1/series/"
     private val json = Json
-    private val manga = mangaRequest(animeRequest(mangaName))
+    private val manga = mangaDetailRequest(mangaIdRequest(mangaName))
 
     private val description = manga.jsonObject["description"]!!.jsonPrimitive.content
     private val title = manga.jsonObject["title"]!!.jsonPrimitive.content
@@ -99,7 +99,7 @@ open class MangaUpDates(mangaName: String) {
         return latestChapter
     }
 
-    private fun animeRequest(name: String): String {
+    private fun mangaIdRequest(name: String): String {
         val search = JsonObject(
             mapOf(
                 "search" to JsonPrimitive(name)
@@ -118,7 +118,7 @@ open class MangaUpDates(mangaName: String) {
         return data.jsonObject["series_id"].toString()
     }
 
-    private fun mangaRequest(mangaId: String): JsonObject {
+    private fun mangaDetailRequest(mangaId: String): JsonObject {
         val request = Request.Builder()
             .url(BASE_URL + mangaId)
             .build()
