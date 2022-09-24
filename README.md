@@ -23,7 +23,8 @@ just clone the repository and have fun with it. you can copy some code or just a
     }
 
 - you only need to grape the title of manga and passed as parameter 
-- you can also add the type and category to genre by just adding true as parameter in `getStatus(ture)`
+- you can also add the type and category to genre by just adding true as parameter in `getGenres(ture)`
+- you can get status as string by passing false in `getStatus(false)`
 
 # Contributing
 
