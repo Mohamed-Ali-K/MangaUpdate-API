@@ -6,7 +6,16 @@ This repository contains the API to grape some manga INFO from the [MangaUpdate]
 
 # Usage
 
-just clone the repository and have fun with it. you can copy some code or just add the class file to your project and don't forget to add the `dependencies` in your `build.gradle.kts`
+just clone the repository and have fun with it. you can copy some code or just add the class file` MangaUpdates.kt` to your project.
+
+-> and don't forget to add the `dependencies` in your `build.gradle.kts`
+
+
+        dependencies {
+            implementation("com.squareup.okhttp3:okhttp:4.10.0")
+            implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.0")
+            implementation("uy.kohesive.injekt:injekt-core:1.16.1")
+            }
 
 # Usage in tachiyomi-extensions 
 **example :**
