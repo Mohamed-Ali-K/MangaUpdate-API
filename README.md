@@ -22,13 +22,17 @@ just clone the repository and have fun with it. you can copy some code or just a
 
         override fun mangaDetailsParse(document: Document): SManga = SManga.create().apply {
         val infoElement = document.select("div.row.mb-5").first()
-        title = infoElement.select("div.author-info-title.mb-3 > h1").text().removeSurrounding("(", ")")
-        val manga =  = MangaUpDates(title)
-        description =manga.getDescription()
+
+        title = infoElement.select("div.title-info-title.mb-3 > h1").text()
+
+        val manga = MangaUpDates(title)
+
+        description = manga.getDescription()
         author = manga.getAuthor()
         artist = manga.getArtist()
         status = manga.getStatus()
-        genre =manga.getGenres()
+        genre = manga.getGenres()
+        thumbnail_url = manga.getThumbnailUrl()
     }
 
 - you only need to grape the title of manga and passed as parameter 

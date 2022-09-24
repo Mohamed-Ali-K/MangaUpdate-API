@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="4" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e6f13c6-87cf-47d9-a609-17aab73f56cd" name="Changes" comment="README.md modification">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/kenis/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/kenis/MangaUpDates.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/kenis/MangaUpDates.kt" afterDir="false" />
+    <list default="true" id="2e6f13c6-87cf-47d9-a609-17aab73f56cd" name="Changes" comment="add a Main.kt just for the purpose of testing the Application">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,18 +40,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Project.color&quot;: &quot;186030&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Project.color": "186030",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "dart.analysis.tool.window.visible": "false",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "show.migrate.to.gradle.popup": "false"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.kenis.MainKt" />
@@ -74,7 +76,7 @@
       <option name="presentableId" value="Default" />
       <updated>1663986338720</updated>
       <workItem from="1663986340552" duration="2601000" />
-      <workItem from="1664017964752" duration="4947000" />
+      <workItem from="1664017964752" duration="5608000" />
     </task>
     <task id="LOCAL-00001" summary="project creation">
       <created>1663986819810</created>
@@ -104,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664019597808</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add a Main.kt just for the purpose of testing the Application">
+      <created>1664023684597</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1664023684597</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,6 +134,7 @@
     <MESSAGE value="project creation" />
     <MESSAGE value="add README.md" />
     <MESSAGE value="README.md modification" />
-    <option name="LAST_COMMIT_MESSAGE" value="README.md modification" />
+    <MESSAGE value="add a Main.kt just for the purpose of testing the Application" />
+    <option name="LAST_COMMIT_MESSAGE" value="add a Main.kt just for the purpose of testing the Application" />
   </component>
 </project>
