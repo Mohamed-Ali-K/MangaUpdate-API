@@ -17,12 +17,15 @@ open class MangaUpDates(mangaName: String) {
 
     private val description = manga.jsonObject["description"]!!.jsonPrimitive.content
     private val title = manga.jsonObject["title"]!!.jsonPrimitive.content
-    private val alternativeName = manga.jsonObject["associated"]!!.jsonArray.joinToString("\n") { it.jsonObject["title"]!!.jsonPrimitive.content }
-    private val genres = manga.jsonObject["genres"]!!.jsonArray.joinToString(", ") { it.jsonObject["genre"]!!.jsonPrimitive.content }
+    private val alternativeName =
+        manga.jsonObject["associated"]!!.jsonArray.joinToString(", ") { it.jsonObject["title"]!!.jsonPrimitive.content }
+    private val genres =
+        manga.jsonObject["genres"]!!.jsonArray.joinToString(", ") { it.jsonObject["genre"]!!.jsonPrimitive.content }
     private val categories = manga.jsonObject["categories"]!!.jsonArray
     private val publishers = manga.jsonObject["publishers"]!!.jsonArray
     private val authors = manga.jsonObject["authors"]!!.jsonArray
-    private val thumbnailUrl = manga.jsonObject["image"]!!.jsonObject["url"]!!.jsonObject["original"]!!.jsonPrimitive.content
+    private val thumbnailUrl =
+        manga.jsonObject["image"]!!.jsonObject["url"]!!.jsonObject["original"]!!.jsonPrimitive.content
     private val type = manga.jsonObject["type"]!!.jsonPrimitive.content
     private val latestChapter = manga.jsonObject["latest_chapter"]!!.jsonPrimitive.content
     private val status = manga.jsonObject["status"]!!.jsonPrimitive.content
@@ -34,14 +37,21 @@ open class MangaUpDates(mangaName: String) {
     open fun getTitle(): String {
         return title
     }
+
     open fun getDescription(): String {
         return descriptionParser(description)
     }
-    open fun getIsCompleted () : Boolean{
+
+    open fun getType(): String {
+        return type
+    }
+
+    open fun getIsCompleted(): Boolean {
         return completed
     }
-    open fun getCategory(categories: JsonArray): String {
-        return categoryParser(this.categories)
+
+    open fun getCategory(): String {
+        return categoryParser(categories)
     }
 
     open fun getAuthor(): String {
@@ -56,33 +66,36 @@ open class MangaUpDates(mangaName: String) {
         return alternativeName
     }
 
-    open fun getStatus(isForTachiyomi: Boolean = true) : Any{
+    open fun getStatus(isForTachiyomi: Boolean = true): Any {
         return if (isForTachiyomi) {
 
             statusParser(status, true).toInt()
         } else {
-            statusParser(status,false)
+            statusParser(status, false)
         }
     }
-    open fun getGenres (isMixedWithCategoryAndType : Boolean = false) : String {
+
+    open fun getGenres(isMixedWithCategoryAndType: Boolean = false): String {
         return if (isMixedWithCategoryAndType) {
-            listOfNotNull (genres, getCategory(categories), type ).joinToString(", ")
+            listOfNotNull(genres, getCategory(), type).joinToString(", ")
         } else {
             genres
         }
     }
 
-    open fun getYears () : String{
+    open fun getYears(): String {
         return year
     }
-    open fun getThumbnailUrl () : String{
+
+    open fun getThumbnailUrl(): String {
         return thumbnailUrl
     }
 
-    open fun getPublishers (): String {
+    open fun getPublishers(): String {
         return publishersParser(publishers)
     }
-    open fun getLastChapter () : String {
+
+    open fun getLastChapter(): String {
         return latestChapter
     }
 
@@ -147,17 +160,19 @@ open class MangaUpDates(mangaName: String) {
         }.joinToString(", ") { it.jsonPrimitive.content }
 
     }
+
     private fun publishersParser(publishers: JsonArray): String {
         return buildJsonArray {
             for (i in 0 until publishers.size) {
                 val type = publishers[i].jsonObject["type"]!!.jsonPrimitive.content
                 if (type == "Original") {
-                    authors[i].jsonObject["publisher_name"]?.let { add(it) }
+                    publishers[i].jsonObject["publisher_name"]?.let { add(it) }
                 }
             }
         }.joinToString(", ") { it.jsonPrimitive.content }
 
     }
+
     private fun artistParser(authors: JsonArray): String {
         return buildJsonArray {
             for (i in 0 until authors.size) {
@@ -170,7 +185,7 @@ open class MangaUpDates(mangaName: String) {
 
     }
 
-    private fun statusParser(status : String, isForTachiyomi: Boolean = true) : String {
+    private fun statusParser(status: String, isForTachiyomi: Boolean = true): String {
         return if (isForTachiyomi) {
             when {
                 completed -> "2"
@@ -181,7 +196,7 @@ open class MangaUpDates(mangaName: String) {
             }
         } else {
             when {
-                completed ->  "Completed"
+                completed -> "Completed"
                 status.contains("Ongoing") -> "Ongoing"
                 status.contains("Complete") -> "Completed"
                 status.contains("Hiatus") -> "Hiatus"
